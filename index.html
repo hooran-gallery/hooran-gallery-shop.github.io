@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>هوران گالری | کیف و مهر دست‌ساز</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>هوران گالری</h1>
+    <p>فروشگاه اینترنتی کیف و مهر دست‌ساز</p>
+</header>
+
+<div class="container">
+
+    <h2>محصولات</h2>
+
+    <div id="products" class="products">
+        <!-- محصولات اینجا نمایش داده می‌شوند -->
+    </div>
+
+    <div class="chat-box">
+
+        <h2>گفتگو با فروشنده</h2>
+
+        <div id="messages"></div>
+
+        <div class="chat-input">
+
+            <input
+                id="msg"
+                type="text"
+                placeholder="پیام خود را بنویسید..."
+            >
+
+            <button
+                class="btn"
+                onclick="sendMessage()">
+                ارسال
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    تماس: 09193753356
+</footer>
+
+<!-- دکمه مخفی مدیریت -->
+<button id="secretBtn"></button>
+
+<!-- پنل مدیریت -->
+<div id="adminPanel">
+
+    <h3>مدیریت محصولات</h3>
+
+    <input
+        type="text"
+        id="productName"
+        placeholder="نام محصول">
+
+    <input
+        type="number"
+        id="productPrice"
+        placeholder="قیمت">
+
+    <input
+        type="text"
+        id="productImage"
+        placeholder="لینک عکس">
+
+    <button
+        class="btn btn-gold"
+        onclick="addProduct()">
+        ثبت محصول
+    </button>
+
+    <button
+        class="btn"
+        onclick="closeAdmin()">
+        بستن
+    </button>
+
+</div>
+
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
